@@ -1,8 +1,9 @@
 
 # Main Flow
-        Twitter post    =>      JSON     =>   filter   =>      RSS entry
+        Twitter post    =>      JSON        =>       Filter       =>      RSS entry
 
 # Steps To Get There
         0. Setup project in GitHub
         1. Check how to get Twitter post
-        2. Learn how to create an RSS feed
+        2. Build a list of keywords for posts we want to send to RSS
+        3. Learn how to create an RSS feed
