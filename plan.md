@@ -1,6 +1,6 @@
 
 # Main Flow
-        Twitter post    =>      JSON        =>      RSS entry
+        Twitter post    =>      JSON     =>   filter   =>      RSS entry
 
 # Steps To Get There
         0. Setup project in GitHub
