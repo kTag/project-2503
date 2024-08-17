@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><id>http://lernfunk.de/media/654321</id><title>Some Testfeed</title><updated>2024-08-14T11:01:03.454607+00:00</updated><author><name>John Doe</name><email>john@example.de</email></author><link href="http://example.com" rel="alternate"/><link href="http://larskiesow.de/test.atom" rel="self"/><generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator><logo>http://ex.com/logo.jpg</logo><subtitle>This is a cool feed!</subtitle></feed>
