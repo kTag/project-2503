@@ -1,11 +1,12 @@
 import tweepy
+import os
 
 # Authentication 
 client = tweepy.Client(
-    consumer_key=${{ secrets.TWITTER_CONSUMER_KEY }},
-    consumer_secret=${{ secrets.TWITTER_CONSUMER_SECRET }},
-    access_token=${{ secrets.TWITTER_ACCESS_TOKEN }},
-    access_token_secret=${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}
+    consumer_key=os.environ['TWITTER_CONSUMER_KEY'],
+    consumer_secret=os.environ['TWITTER_CONSUMER_SECRET'],
+    access_token=os.environ['TWITTER_ACCESS_TOKEN'],
+    access_token_secret=os.environ['TWITTER_ACCESS_TOKEN_SECRET']
 )
 
 # Fetch tweets
