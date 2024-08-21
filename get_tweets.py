@@ -10,8 +10,8 @@ client = tweepy.Client(
 )
 
 # Fetch tweets
-username = "woonomic"
-tweets = client.get_users_tweets(username)
+username = '630092237' 
+tweets = client.get_users_tweets(id=username, tweet_fields=['context_annotations','created_at','geo'])
 
 # Process tweets
 for tweet in tweets.data:
