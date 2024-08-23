@@ -4,17 +4,16 @@ fg.id('https://snow-services.com')
 fg.title('kTag Personal Nostr Feed')
 fg.author( {'name':'kTag','email':'sdf@sdf.com'} )
 fg.link( href='https://github.com/kTag/project-2503', rel='alternate' )
-fg.logo('http://ex.com/logo.jpg')
+fg.logo('https://raw.githubusercontent.com/kTag/project-2503/nostr/onektag.png')
 fg.subtitle('Nostr Feed')
 fg.link( href='https://snow-services.com', rel='self' )
 fg.language('en')
 
 fe = fg.add_entry()
-fe.id('http://lernfunk.de/media/654321/1')
-fe.title('The First Episode')
-fe.description('Description')
-fe.link(href="http://lernfunk.de/feed")
+fe.id('https://snow-services.com/1234')
+fe.title('First Entry')
+fe.description('This is a long entry to test our RSS feed')
+fe.link(href="https://snow-services.com")
 
 atomfeed = fg.atom_str(pretty=True) # Get the ATOM feed as string
 fg.atom_file('atom.xml') # Write the ATOM feed to a file
-fg.rss_file('rss.xml') # Write the RSS feed to a file
