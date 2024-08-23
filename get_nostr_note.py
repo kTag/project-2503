@@ -15,17 +15,14 @@ from pynostr.relay import Relay
 from pynostr.utils import get_public_key
 
 if __name__ == "__main__":
-
-    console = Console()
-
     input_str = input("author (npub or nip05): ")
-    recipient = ""
     author = get_public_key(input_str)
 
-    relay_url = input("relay: ")
+    #relay_url = input("relay: ")
+    relay_url = "wss://nostr.wine" 
 
     filters = FiltersList(
-        [Filters(authors=[author.hex()], kinds=[EventKind.TEXT_NOTE], limit=100)]
+        [Filters(authors=[author.hex()], kinds=[EventKind.TEXT_NOTE], limit=10)]
     )
 
     subscription_id = uuid.uuid1().hex
@@ -45,7 +42,6 @@ if __name__ == "__main__":
     event_msgs = message_pool.get_all_events()
     print(f"{r.url} returned {len(event_msgs)} TEXT_NOTEs from {input_str}.")
 
-    table = Table("date", "content")
     for event_msg in event_msgs[::-1]:
-        table.add_row(str(event_msg.event.date_time()), event_msg.event.content)
-    console.print(table)
+        readable_event=event_msg.event.to_dict()
+        print(f"{(readable_event)}\n\n")
