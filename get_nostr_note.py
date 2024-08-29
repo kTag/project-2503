@@ -55,7 +55,8 @@ if __name__ == "__main__":
 
     for event_msg in event_msgs[::-1]:
         readable_event=event_msg.event.to_dict()
-        if len(fe.tag) == 0:
+        print(f"{(readable_event)}\n\n")
+        if len(readable_event['tags']) == 0:
             fe = fg.add_entry()
             fe.id(f'https://snow-services.com/{readable_event['id']}')
             fe.title(readable_event['pubkey'])
@@ -63,7 +64,6 @@ if __name__ == "__main__":
             fe.link(href="https://snow-services.com")
         else:
             continue
-        print(f"{(readable_event)}\n\n")
 
     atomfeed = fg.atom_str(pretty=True) # Get the ATOM feed as string
     fg.atom_file('atom.xml') # Write the ATOM feed to a file
