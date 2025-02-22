@@ -58,7 +58,7 @@ if __name__ == "__main__":
         print(f"{(readable_event)}\n\n")
         if len(readable_event['tags']) == 0:
             fe = fg.add_entry()
-            fe.id(f'https://snow-services.com/{readable_event['id']}')
+            fe.id(f"https://snow-services.com/{readable_event['id']}")
             fe.title(readable_event['pubkey'])
             fe.description(readable_event['content'])
             fe.link(href="https://snow-services.com")
