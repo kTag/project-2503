@@ -165,5 +165,5 @@ if __name__ == "__main__":
         else:
             continue
 
-    #atomfeed = fg.atom_str(pretty=True) # Get the ATOM feed as string
-    #fg.atom_file('atom.xml') # Write the ATOM feed to a file
+    atomfeed = fg.atom_str(pretty=True) # Get the ATOM feed as string
+    fg.atom_file('atom.xml') # Write the ATOM feed to a file
